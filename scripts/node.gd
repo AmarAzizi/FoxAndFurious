@@ -39,3 +39,7 @@ func _on_player_hit() -> void:
 func _on_score_timer_timeout() -> void:
 	score += 1
 	$HUD/Score.text = str(score)
+
+
+func _on_speed_timer_timeout() -> void:
+	Engine.time_scale += 0.01
