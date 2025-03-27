@@ -28,6 +28,7 @@ func _on_player_hit() -> void:
 	$HUD/FinalMessage.show()
 	$HUD/FinalScore.text = str(score)
 	$HUD/FinalScore.show()
+	$"HUD/GAME OVER".show()
 	$BackgroundMusic.pitch_scale = 0.4
 	Engine.time_scale = 0.1
 	await get_tree().create_timer(3 * Engine.time_scale).timeout
