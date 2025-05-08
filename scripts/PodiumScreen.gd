@@ -26,16 +26,28 @@ func _on_exit_button_pressed():
 	get_tree().quit()  # Chiude l'applicazione
 
 func _update_podium():
-	# Prendi i dati e ordina per punteggio decrescente
-	var sorted = GlobalName.players_data.duplicate()
+	# 1. Filtra per tenere solo il punteggio più alto per ogni nome
+	var best_scores = {}
+	for entry in GlobalName.players_data:
+		var name = entry["name"]
+		var score = entry["score"]
+		if not best_scores.has(name) or score > best_scores[name]:
+			best_scores[name] = score
+
+	# 2. Crea una lista dagli elementi filtrati
+	var sorted = []
+	for name in best_scores.keys():
+		sorted.append({"name": name, "score": best_scores[name]})
+
+	# 3. Ordina la lista dal punteggio più alto al più basso
 	sorted.sort_custom(func(a, b):
-		return b["score"] - a["score"]
+		return a["score"] > b["score"]
 	)
-	# Riempi le prime 5 righe
+
+	# 4. Riempi le prime 5 righe
 	for i in range(data_labels.size()):
 		if i < sorted.size():
 			var entry = sorted[i]
-			data_labels[i].text = "%s — %d" % [entry["name"], entry["score"]]
+			data_labels[i].text = "%d. %s — %d" % [i+1, entry["name"], entry["score"]]
 		else:
-			# Se non c'è abbastanza dati, mostra placeholder
 			data_labels[i].text = "%d. —" % (i+1)
