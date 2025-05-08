@@ -35,6 +35,10 @@ func _on_player_hit() -> void:
 	Engine.time_scale = 1
 	get_tree().reload_current_scene()
 	
+	# Aggiunge il nome + punteggio nella lista globale
+	GlobalName.add_player(GlobalName.current_player_name, score)
+	print("Classifica aggiornata:", GlobalName.players_data)
+	
 
 
 func _on_score_timer_timeout() -> void:

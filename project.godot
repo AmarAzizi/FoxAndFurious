@@ -18,11 +18,13 @@ config/icon="res://Fox_logo.webp"
 [autoload]
 
 Global="*res://scripts/Global.gd"
+GlobalName="*res://scripts/GlobalName.gd"
 
 [display]
 
 window/size/viewport_width=240
 window/size/viewport_height=135
+window/size/mode=2
 window/stretch/mode="viewport"
 window/handheld/orientation=1
 
