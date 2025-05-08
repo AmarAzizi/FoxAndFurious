@@ -26,6 +26,7 @@ offset_top = 50.0
 offset_right = 152.063
 offset_bottom = 81.0
 theme_override_fonts/font = ExtResource("2_y65xm")
+placeholder_text = "  ...."
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

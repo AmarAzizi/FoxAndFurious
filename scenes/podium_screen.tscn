@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdolp00nfr5pp"]
+
+[ext_resource type="Script" path="res://scripts/PodiumScreen.gd" id="1_44dh7"]
+[ext_resource type="FontFile" uid="uid://dni4v6pbhsx0f" path="res://Assets/PixelOperator8.ttf" id="1_pltt5"]
+
+[node name="PodiumScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_44dh7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Row1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PositionLabel1" type="Label" parent="VBoxContainer/Row1"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+text = "1."
+
+[node name="DataLabel1" type="Label" parent="VBoxContainer/Row1"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+
+[node name="Row2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PositionLabel2" type="Label" parent="VBoxContainer/Row2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+text = "2."
+
+[node name="DataLabel2" type="Label" parent="VBoxContainer/Row2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+
+[node name="Row3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PositionLabel3" type="Label" parent="VBoxContainer/Row3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+text = "3."
+
+[node name="DataLabel3" type="Label" parent="VBoxContainer/Row3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+
+[node name="Row4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PositionLabel4" type="Label" parent="VBoxContainer/Row4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+text = "4."
+
+[node name="DataLabel4" type="Label" parent="VBoxContainer/Row4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+
+[node name="Row5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PositionLabel5" type="Label" parent="VBoxContainer/Row5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+text = "5."
+
+[node name="DataLabel5" type="Label" parent="VBoxContainer/Row5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pltt5")
+
+[node name="Rigioca" type="Button" parent="."]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 109.0
+offset_right = 235.0
+offset_bottom = 131.0
+theme_override_fonts/font = ExtResource("1_pltt5")
+theme_override_font_sizes/font_size = 13
+text = "RESTART"
+
+[node name="Esci" type="Button" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 89.0
+offset_bottom = 131.0
+theme_override_fonts/font = ExtResource("1_pltt5")
+theme_override_font_sizes/font_size = 12
+text = "Beenden"

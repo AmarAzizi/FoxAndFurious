@@ -33,11 +33,13 @@ func _on_player_hit() -> void:
 	Engine.time_scale = 0.1
 	await get_tree().create_timer(3 * Engine.time_scale).timeout
 	Engine.time_scale = 1
-	get_tree().reload_current_scene()
+	#get_tree().reload_current_scene()
 	
 	# Aggiunge il nome + punteggio nella lista globale
 	GlobalName.add_player(GlobalName.current_player_name, score)
 	print("Classifica aggiornata:", GlobalName.players_data)
+	
+	get_tree().change_scene_to_file("res://scenes/podium_screen.tscn")
 	
 
 
