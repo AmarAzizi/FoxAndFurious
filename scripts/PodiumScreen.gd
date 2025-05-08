@@ -48,6 +48,6 @@ func _update_podium():
 	for i in range(data_labels.size()):
 		if i < sorted.size():
 			var entry = sorted[i]
-			data_labels[i].text = "%d. %s — %d" % [i+1, entry["name"], entry["score"]]
+			data_labels[i].text = "%s — %d" % [entry["name"], entry["score"]]
 		else:
 			data_labels[i].text = "%d. —" % (i+1)
